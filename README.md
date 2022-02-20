@@ -24,3 +24,4 @@ data further for downstream processing with minimum latency by calling a webhook
 ● As stated in the document, The “ancillary service” is a simple function that takes in a string consisting of several
 space-separated words and returns an array of integers representing the length in
 characters of each word in the input string.<br>
+● API tests are omited as it's not much of a code and isn't really following a structured pattern.<br>
