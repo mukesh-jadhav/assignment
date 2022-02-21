@@ -27,4 +27,4 @@ characters of each word in the input string.<br>
 ● API tests are omited as it's not much of a code and isn't really following a structured pattern.<br>
 
 <br><br><br>
-Note: After successful execution, code should auto generate a new directory(configurable in config) with all the text files for resources received. 
+<b>Note: <b>After successful execution, code should auto generate a new directory(configurable in config) with all the text files for resources received. 
