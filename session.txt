@@ -1,0 +1,130 @@
+Cohesion and Coupling
+
+Let's start with knowing two important software development concepts called Cohesion and Coupling. First I'll talk about what those matrics
+
+mean and then I'm going to take you through a detailed example in python and show you how you can improve your code by taking these matrics
+
+into account while designing your code.
+
+so let's get started ....
+
+
+I mentioned two important software quality metrics. Cohesion and Coupling. They both are more of an higher level concepts and they say something 
+
+in general about how easily your code can be changed or extended. Let's first look at Cohesion.
+
+
+Cohesion is a degree at which certain class or function belong together. E.g. take a look at this function. 
+
+function with strong cohesion basically has only responsibility. It has only one task. An example of function with strong cohesion is "cosine"
+
+function in math lib. It does only one thing, calculate cosine of number and that's it.
+
+
+Having strong cohesion is important. It makes your code easier to maintain and understand. And code that does one thing only is lot easier to use
+
+than a giant function that does 100 different unrelated things. right?
+
+The other matric is coupling. Coupling is measure of how dependant two parts of your code are on each other. Take a look at this example.
+
+
+in this code you can see, we're checking if email is legit by looking at variaous parts of the email object. Right away, you can see that
+
+the function is dependent quiet heavily on email object. This means that this function is highly coupled with email object. 
+
+Having high coupling is problematic because if you change something in such depedenat objects that means you need rewrite almost entire method 
+
+again and in multiple places for that matter.
+
+
+
+Now there would always be some coupling in your code. Because variaous parts of your application need to work together to achieve certain tasks.
+
+
+Copuling and Cohesion are important parameters in software design. UNfortunately you can not just have a number that tells you how cohesive or coupled 
+
+your code is.
+
+
+
+
+  
+
+
+
+
+
+
+
+--------------------
+
+Python data classes are awesome! I learnt about them a while ago but since then I've been using them much longer in python.
+
+So with this topic, I would like to show you what can you do with them and I would also like to cover couple of really cool things 
+
+that have been added to data classes in python 3.10
+
+
+Classes are combination of two things. Behavior and Data. Behavior in the form of methods and data in the form of class attributes.
+
+Some classes are mostly containers of behavior. e.g. a class that lets you manipulate camera, or class that lets you draw
+
+different shapes on the screen. 
+
+
+Whereas other classes act more like a containers of data. Think of the class for representing a polygonal mesh or a class that 
+
+represents a vehicle.
+ 
+
+Standard classes are mostly good for behavior oriented nature but they don't help much when it comes to data oriented classes.
+
+That's why some programming languages provided more data oriented variaent type of class. E.g. c# has a STRUCT type that is 
+
+much like a class but is more oriented towards representing data strucutres.
+
+
+And since python 3.7, python have data classes module. So data classes help you write data oriented classses.
+
+well it ads convenient mechanism on top of existing classes. Let's start with really simple example just to show you some of the possibilities 
+
+with data classes.
+
+--------------------
+
+generate_id
+
+class camera
+	
+	Now the data oriented class like this might extend very easily. E.g. You might add few methods to calcualte few things or you might
+
+	want to add some extra instance properties like Camera ID, price, status etc. What I mean by that is the class Camera can becomes complicated.
+
+	and the problem with doing all this work yourself is that if you think of adding more instance/class variables, you will have to add it here..
+
+
+	One thing I don't like about data classes is that they abuse the concept of class variable to represent instance variables. This can be 
+
+	confusing. Specially for begineers. Plus if you forget writing the dataclass decorator then you end up creating bunch of class variables instead
+
+	of instance variables leading to more problems in future. But overall, I find the PRO's of dataclasses outweigh the CONS and I still use them
+
+	quiet a lot in my day to day python code.
+
+
+	Let's look at couple of more things you can do with python data classes.
+		- comparing the data ( because we didn't define)
+		- order = True
+		- sort index
+		- __post_init__ method 
+		- default_values
+		- default_factory
+		- init = False
+		- kw_only = False
+
+--------------------
+
+ 	
+
+
+ 
